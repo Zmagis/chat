@@ -4,16 +4,19 @@ import { Sidebar } from "./containers/Sidebar";
 import { MessagesList } from "./containers/MessagesList";
 import { AddMessage } from "./containers/AddMessage";
 
-import "./App.css";
+// import "./App.css";
+import "./styles/style.css";
 
 function App() {
   return (
     <div id="container">
-      <Sidebar />
-      <section id="main">
+      <div id="sidebar">
+        <Sidebar />
+      </div>
+      <div id="main">
         <MessagesList />
         <AddMessage />
-      </section>
+      </div>
     </div>
   );
 }

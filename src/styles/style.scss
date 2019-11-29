@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  font-family: "Press Start 2P";
+  background: rgb(234, 236, 238);
+}
+
+@mixin greenGlassbackground() {
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(13, 77, 129, 0.7);
+  box-shadow: -5px 4px 4px 4px #5a5c5c;
+  color: rgb(211, 233, 243);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 20vw 75vw;
+  grid-template-areas: "sidebar main";
+  margin: 20px 20px 40px 20px;
+}
+
+#main {
+  grid-area: main;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  @include greenGlassbackground();
+  align-items: flex-start;
+  padding: 20px;
+  h1 {
+    font-size: 2em;
+    width: 17vw;
+    border-bottom: 2px dotted rgb(21, 49, 80);
+    margin: 0 0 20px 10px;
+  }
+  li {
+    margin: 10px;
+    padding: 8px;
+    list-style: none;
+    font-size: 1.3em;
+    background: rgba(1, 35, 63, 0.425);
+    border-radius: 5px;
+    box-shadow: -5px 1px 0px 1px rgba(1, 28, 63, 0.24);
+  }
+}
+
+#new-message {
+  @include greenGlassbackground();
+  margin-left: 20px;
+  height: 100px;
+
+  button {
+    padding: 8px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(255, 153, 0);
+    font-family: "Press Start 2P";
+    color: whitesmoke;
+  }
+  textarea {
+    padding: 5px;
+    margin: 5px;
+    width: 90%;
+    height: 90%;
+    border: 1px rgb(255, 168, 37) solid;
+    border-radius: 5px;
+  }
+}
+
+#messages-list {
+  padding: 5px 0 0 5px;
+  margin: 0 20px 20px 20px;
+  height: 85vh;
+  overflow-y: scroll;
+  @include greenGlassbackground();
+  align-items: flex-start;
+  background: rgb(248, 247, 244);
+  box-shadow: -5px 4px 4px 4px #babeba;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: whitesmoke;
+}
+
+#message {
+  background-color: rgb(255, 153, 0);
+  padding: 10px;
+  margin: 5px;
+  display: table;
+  border-radius: 10px;
+}

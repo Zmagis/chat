@@ -1,0 +1,154 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Press Start 2P";
+  background: #eaecee;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20vw 75vw;
+      grid-template-columns: 20vw 75vw;
+      grid-template-areas: "sidebar main";
+  margin: 20px 20px 40px 20px;
+}
+
+#main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+#sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(13, 77, 129, 0.7);
+  -webkit-box-shadow: -5px 4px 4px 4px #5a5c5c;
+          box-shadow: -5px 4px 4px 4px #5a5c5c;
+  color: #d3e9f3;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+}
+
+#sidebar h1 {
+  font-size: 2em;
+  width: 17vw;
+  border-bottom: 2px dotted #153150;
+  margin: 0 0 20px 10px;
+}
+
+#sidebar li {
+  margin: 10px;
+  padding: 8px;
+  list-style: none;
+  font-size: 1.3em;
+  background: rgba(1, 35, 63, 0.425);
+  border-radius: 5px;
+  -webkit-box-shadow: -5px 1px 0px 1px rgba(1, 28, 63, 0.24);
+          box-shadow: -5px 1px 0px 1px rgba(1, 28, 63, 0.24);
+}
+
+#new-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(13, 77, 129, 0.7);
+  -webkit-box-shadow: -5px 4px 4px 4px #5a5c5c;
+          box-shadow: -5px 4px 4px 4px #5a5c5c;
+  color: #d3e9f3;
+  margin-left: 20px;
+  height: 100px;
+}
+
+#new-message button {
+  padding: 8px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ff9900;
+  font-family: "Press Start 2P";
+  color: whitesmoke;
+}
+
+#new-message textarea {
+  padding: 5px;
+  margin: 5px;
+  width: 90%;
+  height: 90%;
+  border: 1px #ffa825 solid;
+  border-radius: 5px;
+}
+
+#messages-list {
+  padding: 5px 0 0 5px;
+  margin: 0 20px 20px 20px;
+  height: 85vh;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(13, 77, 129, 0.7);
+  -webkit-box-shadow: -5px 4px 4px 4px #5a5c5c;
+          box-shadow: -5px 4px 4px 4px #5a5c5c;
+  color: #d3e9f3;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #f8f7f4;
+  -webkit-box-shadow: -5px 4px 4px 4px #babeba;
+          box-shadow: -5px 4px 4px 4px #babeba;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: whitesmoke;
+}
+
+#message {
+  background-color: #ff9900;
+  padding: 10px;
+  margin: 5px;
+  display: table;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

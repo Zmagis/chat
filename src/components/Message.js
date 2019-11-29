@@ -10,6 +10,6 @@ const Message = ({ message, author }) => (
 Message.propTypes = {
   message: propTypes.string.isRequired,
   author: propTypes.string.isRequired
-};
+}; 
 
 export default Message;

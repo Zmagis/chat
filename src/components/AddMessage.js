@@ -5,7 +5,7 @@ const AddMessage = props => {
   let input;
 
   return (
-    <section id="new-message">
+    <section id="new-message" className="write-message">
       <textarea
         placeholder="Abc"
         onKeyPress={e => {
