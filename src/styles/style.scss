@@ -1,31 +1,40 @@
+$textCloudColor: rgb(247, 210, 89);
+$textColorDark: rgb(53, 53, 53);
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 body {
-  height: 100vh;
-  font-family: "Press Start 2P";
-  background: rgb(234, 236, 238);
+  height: 100%;
+
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@mixin greenGlassbackground() {
-  // height: 100%;
+@mixin blueGlassbackground() {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 10px;
-  background-color: rgba(13, 77, 129, 0.7);
-  box-shadow: -5px 4px 4px 4px #5a5c5c;
+  background-color: rgba(13, 77, 129, 0.753);
+  box-shadow: -5px 4px 4px 4px #7779793a;
+  border-radius: 3px;
   color: rgb(211, 233, 243);
 }
 
 #container {
   display: grid;
-  grid-template-columns: 20vw 75vw;
+  grid-template-columns: 20vw 77vw;
   grid-template-areas: "sidebar main";
-  margin: 20px 20px 40px 20px;
+  margin: 5px 10px 20px 20px;
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: 30vw 65vw;
+  }
 }
 
 #main {
@@ -34,16 +43,18 @@ body {
 
 #sidebar {
   grid-area: sidebar;
-  @include greenGlassbackground();
+  @include blueGlassbackground();
   align-items: flex-start;
   padding: 20px;
   h1 {
     font-size: 2em;
-    width: 17vw;
-    border-bottom: 2px dotted rgb(21, 49, 80);
-    margin: 0 0 20px 10px;
+  }
+  ul {
+    border-top: 2px dotted rgb(21, 49, 80);
+    padding-top: 10px;
   }
   li {
+    width: 15vmax;
     margin: 10px;
     padding: 8px;
     list-style: none;
@@ -55,7 +66,7 @@ body {
 }
 
 #new-message {
-  @include greenGlassbackground();
+  @include blueGlassbackground();
   margin-left: 20px;
   height: 100px;
 
@@ -65,16 +76,16 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background: rgb(255, 153, 0);
+    background: $textCloudColor;
     font-family: "Press Start 2P";
-    color: whitesmoke;
+    color: $textColorDark;
   }
   textarea {
     padding: 5px;
     margin: 5px;
     width: 90%;
     height: 90%;
-    border: 1px rgb(255, 168, 37) solid;
+    border: 1px $textCloudColor solid;
     border-radius: 5px;
   }
 }
@@ -84,18 +95,18 @@ body {
   margin: 0 20px 20px 20px;
   height: 85vh;
   overflow-y: scroll;
-  @include greenGlassbackground();
+  @include blueGlassbackground();
   align-items: flex-start;
-  background: rgb(248, 247, 244);
-  box-shadow: -5px 4px 4px 4px #babeba;
+  background: rgba(248, 247, 244, 0.747);
+  box-shadow: -5px 4px 4px 4px #babeba63;
   font-family: "Indie Flower", cursive;
   font-weight: bold;
   letter-spacing: 2px;
-  color: whitesmoke;
+  color: $textColorDark;
 }
 
 #message {
-  background-color: rgb(255, 153, 0);
+  background-color: $textCloudColor;
   padding: 10px;
   margin: 5px;
   display: table;
