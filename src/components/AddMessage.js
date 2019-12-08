@@ -16,7 +16,6 @@ const AddMessage = props => {
             input.value = "";
           }
         }}
-        type="text"
         ref={node => {
           input = node;
         }}

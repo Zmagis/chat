@@ -1,5 +1,4 @@
-$textCloudColor: rgb(247, 210, 89);
-$textColorDark: rgb(53, 53, 53);
+@import "./variables";
 
 * {
   box-sizing: border-box;
@@ -94,6 +93,7 @@ body {
   padding: 5px 0 0 5px;
   margin: 0 20px 20px 20px;
   height: 85vh;
+
   overflow-y: scroll;
   @include blueGlassbackground();
   align-items: flex-start;
@@ -103,12 +103,21 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   color: $textColorDark;
+  ul {
+    width: 100%;
+  }
 }
 
 #message {
-  background-color: $textCloudColor;
-  padding: 10px;
   margin: 5px;
-  display: table;
+  padding: 6px;
+}
+
+.inner-message {
+  display: inline-block;
+  padding: 10px;
   border-radius: 10px;
+  background: $textCloudColor;
+  text-align: left;
+  max-width: 60%;
 }

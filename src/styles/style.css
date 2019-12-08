@@ -159,11 +159,21 @@ body {
   color: #353535;
 }
 
+#messages-list ul {
+  width: 100%;
+}
+
 #message {
-  background-color: #f7d259;
-  padding: 10px;
   margin: 5px;
-  display: table;
+  padding: 6px;
+}
+
+.inner-message {
+  display: inline-block;
+  padding: 10px;
   border-radius: 10px;
+  background: #f7d259;
+  text-align: left;
+  max-width: 60%;
 }
 /*# sourceMappingURL=style.css.map */
